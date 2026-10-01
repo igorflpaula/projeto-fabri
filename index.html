@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Female A | Propostas de layout</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500;600&family=Inter+Tight:wght@600&family=Plus+Jakarta+Sans:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bronze: #996f52; --bronze-deep: #4a3326; --cream: #fdfbf7; --sand: #f5eee6; --ink: #2b211b; --muted: #8c7b6f;
+      --line: rgba(153, 111, 82, 0.22); --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: "Montserrat", sans-serif; color: var(--ink); background: var(--cream); -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+
+    .hub-head { text-align: center; padding: clamp(48px, 7vw, 96px) 24px clamp(32px, 4vw, 56px); display: grid; justify-items: center; gap: 22px; }
+    .hub-head img { width: min(320px, 70vw); }
+    .eyebrow { font-size: 11px; font-weight: 500; letter-spacing: 0.32em; text-transform: uppercase; color: var(--bronze); display: inline-flex; align-items: center; gap: 14px; }
+    .eyebrow::before, .eyebrow::after { content: ""; width: 36px; height: 1px; background: currentColor; }
+    h1 { font-family: "Cormorant Garamond", serif; font-weight: 300; font-size: clamp(40px, 5.4vw, 76px); line-height: 1.05; margin: 0; }
+    h1 em { color: var(--bronze); }
+    .hub-head p { max-width: 62ch; color: #5c4d43; font-weight: 300; line-height: 1.8; margin: 0; }
+
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(18px, 2.4vw, 36px); max-width: 1400px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 56px) clamp(64px, 8vw, 110px); }
+    .card { display: flex; flex-direction: column; background: #fff; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; transition: transform 0.6s var(--ease), box-shadow 0.6s var(--ease); }
+    .card:hover { transform: translateY(-8px); box-shadow: 0 30px 70px -35px rgba(74, 51, 38, 0.45); }
+
+    .preview { position: relative; display: block; aspect-ratio: 4 / 4.6; overflow: hidden; background: var(--sand); border-bottom: 1px solid var(--line); }
+    .preview img { width: 100%; height: auto; transform: translateY(0); transition: transform 7s linear; }
+    .card:hover .preview img { transform: translateY(calc(-100% + 100cqh)); }
+    .preview { container-type: size; }
+    .preview::after {
+      content: "Passe o mouse para rolar"; position: absolute; left: 50%; bottom: 14px; transform: translateX(-50%);
+      padding: 7px 14px; border-radius: 20px; background: rgba(43, 33, 27, 0.75); color: #fff; font-size: 10.5px; letter-spacing: 0.08em;
+      transition: opacity 0.4s;
+    }
+    .card:hover .preview::after { opacity: 0; }
+    @media (hover: none) { .preview::after { display: none; } }
+
+    .body { padding: clamp(22px, 2.4vw, 34px); display: grid; gap: 16px; flex: 1; align-content: start; }
+    .num { font-size: 11px; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: var(--bronze); }
+    .title { margin: 0; line-height: 1; font-size: 34px; }
+    .t1 { font-family: "Inter Tight", sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: -0.04em; font-size: 30px; }
+    .t2 { font-family: "Plus Jakarta Sans", sans-serif; font-weight: 700; letter-spacing: -0.03em; font-size: 30px; }
+    .t3 { font-family: "Cormorant Garamond", serif; font-weight: 400; font-size: 36px; }
+    .inspo { font-size: 12.5px; color: var(--muted); margin-top: -6px; }
+    .desc { margin: 0; font-size: 14px; line-height: 1.75; color: #5c4d43; font-weight: 300; }
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tags span { padding: 5px 11px; border: 1px solid var(--line); border-radius: 20px; font-size: 11px; color: #5c4d43; }
+    .specs { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 11.5px; color: var(--muted); }
+    .swatches { display: flex; }
+    .swatches i { width: 22px; height: 22px; border-radius: 50%; border: 2px solid #fff; box-shadow: 0 0 0 1px var(--line); margin-left: -6px; }
+    .swatches i:first-child { margin-left: 0; }
+    .links { display: grid; grid-template-columns: 1fr auto auto; gap: 8px; padding: 0 clamp(22px, 2.4vw, 34px) clamp(22px, 2.4vw, 34px); }
+    .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 16px; border: 1px solid var(--bronze); color: var(--bronze); font-size: 10.5px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; transition: 0.3s; }
+    .btn:hover { background: var(--bronze); color: #fff; }
+    .btn--fill { background: var(--bronze); color: #fff; }
+    .btn--fill:hover { background: var(--bronze-deep); border-color: var(--bronze-deep); }
+
+    .common { max-width: 1400px; margin: 0 auto clamp(64px, 8vw, 100px); padding: 0 clamp(20px, 4vw, 56px); }
+    .common__box { display: grid; grid-template-columns: auto 1fr; gap: 28px; align-items: center; padding: 28px 34px; background: var(--sand); border-radius: 8px; }
+    .common__box h2 { font-family: "Cormorant Garamond", serif; font-weight: 400; font-size: 28px; margin: 0; }
+    .common__box ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px 26px; font-size: 13px; color: #5c4d43; }
+    .common__box li::before { content: "◇ "; color: var(--bronze); }
+    footer { text-align: center; padding: 0 24px 48px; font-size: 11.5px; color: var(--muted); letter-spacing: 0.06em; }
+
+    @media (max-width: 1100px) { .grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 720px) {
+      .grid { grid-template-columns: 1fr; }
+      .common__box { grid-template-columns: 1fr; }
+      .links { grid-template-columns: 1fr 1fr; }
+      .links .btn--fill { grid-column: 1 / -1; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hub-head">
+    <img src="assets/img/logo-tagline.png" alt="Female A — Global Beauty & Wellness">
+    <span class="eyebrow">Propostas de layout · E-commerce</span>
+    <h1>Três caminhos para a <em>mesma essência</em></h1>
+    <p>Todas as propostas respeitam o brand book da Female A (bronze, creme, a logo e o diamante) e mostram a jornada completa de compra. Navegue por cada versão e escolha a direção, ou combine o que mais gostar de cada uma.</p>
+  </header>
+
+  <main class="grid">
+    <article class="card">
+      <a class="preview" href="v1-refy/index.html"><img src="assets/previews/v1.jpg" alt="Prévia da Versão 1" loading="lazy"></a>
+      <div class="body">
+        <span class="num">Versão 01</span>
+        <h2 class="title t1">Clean &amp; Bold</h2>
+        <span class="inspo">Inspiração: Refy</span>
+        <p class="desc">Minimalista, direta e atual. Tipografia forte em caixa alta, fundo branco, cantos retos e foco total no produto. Navegação por categoria com carrossel, rotina em 3 passos e comunidade no estilo "visto em você".</p>
+        <div class="tags"><span>Minimalista</span><span>Tipografia forte</span><span>Rotina em passos</span><span>Carrossel por categoria</span></div>
+        <div class="specs">
+          <span>Inter Tight + Inter</span>
+          <span class="swatches"><i style="background:#161412"></i><i style="background:#ffffff"></i><i style="background:#f4f0eb"></i><i style="background:#996f52"></i></span>
+        </div>
+      </div>
+      <div class="links">
+        <a class="btn btn--fill" href="v1-refy/index.html">Ver home</a>
+        <a class="btn" href="v1-refy/produtos.html">Loja</a>
+        <a class="btn" href="v1-refy/produto.html?id=defining-gel">Produto</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <a class="preview" href="v2-sallve/index.html"><img src="assets/previews/v2.jpg" alt="Prévia da Versão 2" loading="lazy"></a>
+      <div class="body">
+        <span class="num">Versão 02</span>
+        <h2 class="title t2">leve &amp; próxima</h2>
+        <span class="inspo">Inspiração: Sallve</span>
+        <p class="desc">Acolhedora, com conversa de amiga, tons suaves e cards arredondados. Busca em destaque, teste interativo que monta a rotina, kits com desconto, ciência + comunidade e reviews de verdade.</p>
+        <div class="tags"><span>Tom próximo</span><span>Quiz interativo</span><span>Kits</span><span>WhatsApp</span></div>
+        <div class="specs">
+          <span>Plus Jakarta Sans</span>
+          <span class="swatches"><i style="background:#f4ded6"></i><i style="background:#f5ebcb"></i><i style="background:#e6ede3"></i><i style="background:#996f52"></i></span>
+        </div>
+      </div>
+      <div class="links">
+        <a class="btn btn--fill" href="v2-sallve/index.html">Ver home</a>
+        <a class="btn" href="v2-sallve/produtos.html">Loja</a>
+        <a class="btn" href="v2-sallve/produto.html?id=defining-gel">Produto</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <a class="preview" href="v3-editorial/index.html"><img src="assets/previews/v3.jpg" alt="Prévia da Versão 3" loading="lazy"></a>
+      <div class="body">
+        <span class="num">Versão 03</span>
+        <h2 class="title t3">Luxo Editorial</h2>
+        <span class="inspo">Direção criativa própria</span>
+        <p class="desc">Sofisticada como uma revista de moda: serifas elegantes, bronze e creme do brand book, animações suaves, manifesto da marca, comunidade "Qual delas é você hoje?" e contagem regressiva para a boutique.</p>
+        <div class="tags"><span>Premium</span><span>Editorial</span><span>Comunidade</span><span>Boutique</span></div>
+        <div class="specs">
+          <span>Cormorant Garamond + Montserrat</span>
+          <span class="swatches"><i style="background:#fdfbf7"></i><i style="background:#996f52"></i><i style="background:#4a3326"></i><i style="background:#2b211b"></i></span>
+        </div>
+      </div>
+      <div class="links">
+        <a class="btn btn--fill" href="v3-editorial/index.html">Ver home</a>
+        <a class="btn" href="v3-editorial/produtos.html">Loja</a>
+        <a class="btn" href="v3-editorial/produto.html?id=defining-gel">Produto</a>
+      </div>
+    </article>
+  </main>
+
+  <section class="common">
+    <div class="common__box">
+      <h2>Em todas as versões</h2>
+      <ul>
+        <li>Home, listagem e página de produto</li>
+        <li>Sacola lateral funcional</li>
+        <li>Filtros e ordenação</li>
+        <li>Português / English</li>
+        <li>Pix, parcelamento e frete grátis</li>
+        <li>100% responsivo</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>Female A · Global Beauty &amp; Wellness · Layout para apresentação. Preços, avaliações e textos são ilustrativos.</footer>
+</body>
+</html>

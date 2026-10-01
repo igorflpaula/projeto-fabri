@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loja | Female A</title>
+  <meta name="theme-color" content="#FFFCF8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/css/base.css">
+  <link rel="stylesheet" href="css/v2.css">
+</head>
+<body data-page="listing">
+  <div id="site-header"></div>
+
+  <main>
+    <section class="s-listing-hero">
+      <div class="container">
+        <div class="s-listing-hero__card">
+          <div class="s-listing-hero__text">
+            <nav class="breadcrumb" aria-label="breadcrumb">
+              <a href="index.html" data-i18n="crumb_home">Início</a>
+              <svg class="icon"><use href="#i-chevron"></use></svg>
+              <span id="listing-crumb">Todos os produtos</span>
+            </nav>
+            <h1 class="display h1" id="listing-title">A <em>coleção</em></h1>
+            <p data-i18n="s_ls_text">fórmulas veganas, testadas e criadas com a nossa comunidade. encontre o produto certo pra você.</p>
+          </div>
+          <div class="s-listing-hero__imgs" aria-hidden="true">
+            <img src="../assets/img/card-defining-gel.jpg" alt="">
+            <img src="../assets/img/card-growth-elixir.jpg" alt="">
+            <img src="../assets/img/card-anti-estrias.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="toolbar">
+      <div class="container toolbar__inner">
+        <div class="chips" id="chips" role="tablist"></div>
+        <div class="toolbar__right">
+          <span class="toolbar__count" id="listing-count"></span>
+          <label class="select">
+            <span class="sr-only" data-i18n="sort_label">Ordenar por</span>
+            <select id="sort">
+              <option value="featured">Destaques</option>
+              <option value="price-asc">Menor preço</option>
+              <option value="price-desc">Maior preço</option>
+              <option value="rating">Mais bem avaliados</option>
+            </select>
+            <svg class="icon"><use href="#i-chevron-down"></use></svg>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="container" style="padding-bottom: clamp(56px, 7vw, 96px)">
+      <div class="product-grid listing-grid" id="listing-grid"></div>
+    </section>
+
+    <section class="section--tight" style="padding-top: 0; padding-bottom: clamp(56px, 7vw, 96px)">
+      <div class="container s-perks">
+        <div><svg class="icon"><use href="#i-sparkle"></use></svg><div><strong data-i18n="s_pk1">5% off no pix</strong><span data-i18n="s_pk1t">em todas as compras</span></div></div>
+        <div><svg class="icon"><use href="#i-truck"></use></svg><div><strong data-i18n="s_pk2">frete grátis</strong><span data-i18n="s_pk2t">acima de R$ 299</span></div></div>
+        <div><svg class="icon"><use href="#i-diamond"></use></svg><div><strong data-i18n="s_pk3">até 6x</strong><span data-i18n="s_pk3t">sem juros</span></div></div>
+        <div><svg class="icon"><use href="#i-return"></use></svg><div><strong data-i18n="s_pk4">primeira troca grátis</strong><span data-i18n="s_pk4t">em até 30 dias</span></div></div>
+      </div>
+    </section>
+  </main>
+
+  <a href="#" class="s-whats" aria-label="WhatsApp"><svg class="icon"><use href="#i-whatsapp"></use></svg><span data-i18n="s_whats">chama a gente no whatsapp</span></a>
+
+  <div id="site-footer"></div>
+
+  <script>window.FA_BASE = "../"; window.FA_THEME = { headerSearch: true, footerLogo: "logo-tagline.png" };</script>
+  <script src="../shared/js/data.js"></script>
+  <script src="../shared/js/i18n.js"></script>
+  <script src="js/v2.js"></script>
+  <script src="../shared/js/main.js"></script>
+</body>
+</html>

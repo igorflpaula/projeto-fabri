@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loja | Female A</title>
+  <meta name="theme-color" content="#FFFFFF">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/css/base.css">
+  <link rel="stylesheet" href="css/v1.css">
+</head>
+<body data-page="listing">
+  <div id="site-header"></div>
+
+  <main>
+    <section class="r-listing-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="breadcrumb">
+          <a href="index.html" data-i18n="crumb_home">Início</a>
+          <svg class="icon"><use href="#i-chevron"></use></svg>
+          <span id="listing-crumb">Todos os produtos</span>
+        </nav>
+        <div class="r-listing-hero__inner">
+          <h1 class="display" id="listing-title">A <em>coleção</em></h1>
+          <p data-i18n="r_ls_text">Fórmulas que simplificam a sua rotina e entregam resultado de verdade. Veganas, cruelty free e feitas para todas.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="toolbar">
+      <div class="container toolbar__inner">
+        <div class="chips" id="chips" role="tablist"></div>
+        <div class="toolbar__right">
+          <span class="toolbar__count" id="listing-count"></span>
+          <label class="select">
+            <span class="sr-only" data-i18n="sort_label">Ordenar por</span>
+            <select id="sort">
+              <option value="featured">Destaques</option>
+              <option value="price-asc">Menor preço</option>
+              <option value="price-desc">Maior preço</option>
+              <option value="rating">Mais bem avaliados</option>
+            </select>
+            <svg class="icon"><use href="#i-chevron-down"></use></svg>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="container" style="padding-bottom: clamp(72px, 9vw, 120px)">
+      <div class="product-grid listing-grid" id="listing-grid"></div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="container">
+        <div class="r-values">
+          <div><svg class="icon"><use href="#i-truck"></use></svg><strong data-i18n="perk1">Frete grátis acima de R$ 299</strong></div>
+          <div><svg class="icon"><use href="#i-leaf"></use></svg><strong data-i18n="perk2">Vegano e cruelty free</strong></div>
+          <div><svg class="icon"><use href="#i-gift"></use></svg><strong data-i18n="perk3">Embalagem para presente</strong></div>
+          <div><svg class="icon"><use href="#i-shield"></use></svg><strong data-i18n="perk4">Compra 100% segura</strong></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script>window.FA_BASE = "../"; window.FA_THEME = {};</script>
+  <script src="../shared/js/data.js"></script>
+  <script src="../shared/js/i18n.js"></script>
+  <script src="js/v1.js"></script>
+  <script src="../shared/js/main.js"></script>
+</body>
+</html>

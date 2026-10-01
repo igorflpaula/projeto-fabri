@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loja | Female A</title>
+  <meta name="description" content="Conheça a coleção Female A: sobrancelhas, cílios, cabelo, corpo e kits exclusivos.">
+  <meta name="theme-color" content="#FDFBF7">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/css/base.css">
+</head>
+<body data-page="listing">
+  <div id="site-header"></div>
+
+  <main>
+    <section class="page-hero">
+      <div class="container page-hero__inner">
+        <div class="page-hero__text">
+          <nav class="breadcrumb" aria-label="breadcrumb">
+            <a href="index.html" data-i18n="crumb_home">Início</a>
+            <svg class="icon"><use href="#i-chevron"></use></svg>
+            <span id="listing-crumb">Todos os produtos</span>
+          </nav>
+          <span class="eyebrow eyebrow--line" data-i18n="ls_eyebrow">Global Beauty & Wellness</span>
+          <h1 class="display h1" id="listing-title">A <em>coleção</em></h1>
+          <p data-i18n="ls_text">Fórmulas de alta performance, texturas sensoriais e resultados reais. Escolha o seu ritual e descubra a beleza que revela a sua essência.</p>
+        </div>
+        <div class="page-hero__visual" aria-hidden="true">
+          <img src="../assets/img/card-defining-gel.jpg" alt="">
+          <img src="../assets/img/hero-lancamento.jpg" alt="">
+          <img src="../assets/img/card-anti-estrias.jpg" alt="">
+        </div>
+      </div>
+    </section>
+
+    <div class="toolbar">
+      <div class="container toolbar__inner">
+        <div class="chips" id="chips" role="tablist"></div>
+        <div class="toolbar__right">
+          <span class="toolbar__count" id="listing-count"></span>
+          <label class="select">
+            <span class="sr-only" data-i18n="sort_label">Ordenar por</span>
+            <select id="sort">
+              <option value="featured">Destaques</option>
+              <option value="price-asc">Menor preço</option>
+              <option value="price-desc">Maior preço</option>
+              <option value="rating">Mais bem avaliados</option>
+            </select>
+            <svg class="icon"><use href="#i-chevron-down"></use></svg>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="container" style="padding-bottom: clamp(72px, 9vw, 120px)">
+      <div class="product-grid listing-grid" id="listing-grid"></div>
+    </section>
+
+    <section class="section section--sand section--tight">
+      <div class="container pdp__perks" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px">
+        <div style="background:var(--cream)"><svg class="icon"><use href="#i-truck"></use></svg><span data-i18n="perk1">Frete grátis acima de R$ 299</span></div>
+        <div style="background:var(--cream)"><svg class="icon"><use href="#i-leaf"></use></svg><span data-i18n="perk2">Vegano e cruelty free</span></div>
+        <div style="background:var(--cream)"><svg class="icon"><use href="#i-gift"></use></svg><span data-i18n="perk3">Embalagem para presente</span></div>
+        <div style="background:var(--cream)"><svg class="icon"><use href="#i-shield"></use></svg><span data-i18n="perk4">Compra 100% segura</span></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script>window.FA_BASE = "../";</script>
+  <script src="../shared/js/data.js"></script>
+  <script src="../shared/js/i18n.js"></script>
+  <script src="../shared/js/main.js"></script>
+</body>
+</html>

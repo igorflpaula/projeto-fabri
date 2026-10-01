@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produto | Female A</title>
+  <meta name="description" content="Female A — Global Beauty & Wellness.">
+  <meta name="theme-color" content="#FDFBF7">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/css/base.css">
+</head>
+<body data-page="product">
+  <div id="site-header"></div>
+
+  <main>
+    <section class="container pdp" id="pdp"></section>
+
+    <!-- Ritual -->
+    <section class="section section--sand" style="margin-top: clamp(48px, 6vw, 96px)">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <div class="section-head__text">
+            <span class="eyebrow reveal" data-i18n="pr_eyebrow">O ritual Female A</span>
+            <h2 class="display h2 reveal" data-i18n="pr_title">Três passos para a sua <em>melhor versão</em></h2>
+          </div>
+        </div>
+        <div class="ritual-steps">
+          <div class="ritual-step reveal">
+            <h3 data-i18n="pr_s1">Prepare</h3>
+            <p data-i18n="pr_s1t">Comece com a pele e os fios limpos. Um gesto simples que potencializa cada ativo da fórmula.</p>
+          </div>
+          <div class="ritual-step reveal reveal-delay-1">
+            <h3 data-i18n="pr_s2">Trate</h3>
+            <p data-i18n="pr_s2t">Aplique o produto seguindo o modo de uso, com movimentos suaves e sem pressa. Esse é o seu momento.</p>
+          </div>
+          <div class="ritual-step reveal reveal-delay-2">
+            <h3 data-i18n="pr_s3">Revele</h3>
+            <p data-i18n="pr_s3t">Use diariamente e acompanhe a transformação. A constância é o segredo dos resultados visíveis.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Avaliações -->
+    <section class="section" id="avaliacoes">
+      <div class="container reviews" id="reviews"></div>
+    </section>
+
+    <!-- Relacionados -->
+    <section class="section section--sand">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__text">
+            <span class="eyebrow eyebrow--line reveal" data-i18n="rel_eyebrow">Complete o ritual</span>
+            <h2 class="display h2 reveal" data-i18n="rel_title">Você também vai <em>amar</em></h2>
+          </div>
+          <a href="produtos.html" class="link-arrow reveal"><span data-i18n="see_all_products">Ver todos os produtos</span> <svg class="icon icon--sm"><use href="#i-arrow"></use></svg></a>
+        </div>
+        <div class="product-grid" id="related"></div>
+      </div>
+    </section>
+  </main>
+
+  <div class="sticky-buy" id="sticky-buy"></div>
+
+  <div id="site-footer"></div>
+
+  <script>window.FA_BASE = "../";</script>
+  <script src="../shared/js/data.js"></script>
+  <script src="../shared/js/i18n.js"></script>
+  <script src="../shared/js/main.js"></script>
+</body>
+</html>

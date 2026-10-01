@@ -1,0 +1,6 @@
+tmp/
+assets/previews/_*
+*_prev-*.html
+_test.html
+.DS_Store
+Thumbs.db
