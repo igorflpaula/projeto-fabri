@@ -475,7 +475,7 @@
     if (listingCat === "all" && listingSort === "featured" && !query && !THEME.noPromoTile) {
       cards.splice(4, 0, `
         <a class="promo-tile reveal" href="produto.html?id=kit-ritual">
-          <img src="${IMG}ritual-banner.jpg" alt="" loading="lazy">
+          <img src="${IMG}ritual-banner.jpg" alt="">
           <div class="promo-tile__body">
             <span class="eyebrow eyebrow--line">${t("promoEyebrow")}</span>
             <h3 class="display h3">${t("promoTitle")}</h3>

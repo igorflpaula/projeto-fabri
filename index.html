@@ -69,7 +69,29 @@
     .common__box li::before { content: "◇ "; color: var(--bronze); }
     footer { text-align: center; padding: 0 24px 48px; font-size: 11.5px; color: var(--muted); letter-spacing: 0.06em; }
 
+    .featured { max-width: 1400px; margin: 0 auto clamp(56px, 7vw, 96px); padding: 0 clamp(20px, 4vw, 56px); }
+    .featured .card { display: grid; grid-template-columns: 1.15fr 1fr; border-radius: 0; border-color: var(--bronze); }
+    .featured .card:hover { transform: none; }
+    .featured .preview { aspect-ratio: auto; min-height: 560px; border-bottom: 0; border-right: 1px solid var(--line); }
+    .featured .body { padding: clamp(28px, 4vw, 56px); gap: 20px; align-content: center; }
+    .featured .links { grid-column: 2; padding: 0 clamp(28px, 4vw, 56px) clamp(28px, 4vw, 56px); }
+    .featured .card > .preview { grid-row: span 2; }
+    .featured .btn { border-radius: 0; }
+    .t4 { font-family: "Cormorant Garamond", serif; font-weight: 300; font-size: clamp(40px, 4vw, 56px); }
+    .t4 em { color: var(--bronze); }
+    .flag { justify-self: start; padding: 7px 12px; background: var(--bronze); color: var(--cream); font-size: 10px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; }
+    .feedback { margin: 0; padding: 18px 22px; border-left: 2px solid var(--bronze); background: var(--sand); font-family: "Cormorant Garamond", serif; font-style: italic; font-size: 20px; line-height: 1.4; color: #6e4c36; }
+    .feedback small { display: block; margin-top: 8px; font-family: "Montserrat", sans-serif; font-style: normal; font-size: 10.5px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
+    .section-label { max-width: 1400px; margin: 0 auto 22px; padding: 0 clamp(20px, 4vw, 56px); display: flex; align-items: center; gap: 18px; font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--muted); }
+    .section-label::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+
     @media (max-width: 1100px) { .grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 900px) {
+      .featured .card { grid-template-columns: 1fr; }
+      .featured .preview { min-height: 0; aspect-ratio: 4 / 4.2; border-right: 0; border-bottom: 1px solid var(--line); }
+      .featured .card > .preview { grid-row: auto; }
+      .featured .links { grid-column: auto; }
+    }
     @media (max-width: 720px) {
       .grid { grid-template-columns: 1fr; }
       .common__box { grid-template-columns: 1fr; }
@@ -82,9 +104,35 @@
   <header class="hub-head">
     <img src="assets/img/logo-tagline.png" alt="Female A — Global Beauty & Wellness">
     <span class="eyebrow">Propostas de layout · E-commerce</span>
-    <h1>Três caminhos para a <em>mesma essência</em></h1>
-    <p>Todas as propostas respeitam o brand book da Female A (bronze, creme, a logo e o diamante) e mostram a jornada completa de compra. Navegue por cada versão e escolha a direção, ou combine o que mais gostar de cada uma.</p>
+    <h1>Quatro caminhos para a <em>mesma essência</em></h1>
+    <p>Todas as propostas respeitam o brand book da Female A (bronze, creme, a logo e o diamante) e mostram a jornada completa de compra. A Versão 4 une o que vocês mais gostaram nas anteriores.</p>
   </header>
+
+  <section class="featured">
+    <article class="card">
+      <a class="preview" href="v4-assinatura/index.html"><img src="assets/previews/v4.jpg" alt="Prévia da Versão 4"></a>
+      <div class="body">
+        <span class="flag">Nova · a partir do feedback</span>
+        <span class="num">Versão 04</span>
+        <h2 class="title t4">Assinatura <em>Female A</em></h2>
+        <span class="inspo">O formato da Versão 1 com a paleta, as fontes e a alma da Versão 3</span>
+        <p class="desc">Hero com fotos em tela cheia, categorias em abas com carrossel, rotina em 3 passos, letreiro gigante e "visto em você", agora com serifas elegantes, manifesto, comunidade "Qual delas é você hoje?" e boutique. Todos os textos na paleta bronze, sem preto e sem cantos arredondados.</p>
+        <blockquote class="feedback">“Curti muito o formato do primeiro e as paletas e fontes do terceiro.”<small>Feedback da cliente</small></blockquote>
+        <div class="tags"><span>Formato V1</span><span>Paleta e fontes V3</span><span>Sem preto</span><span>Cantos retos</span></div>
+        <div class="specs">
+          <span>Cormorant Garamond + Montserrat</span>
+          <span class="swatches"><i style="background:#fdfbf7"></i><i style="background:#f5eee6"></i><i style="background:#996f52"></i><i style="background:#6e4c36"></i></span>
+        </div>
+      </div>
+      <div class="links">
+        <a class="btn btn--fill" href="v4-assinatura/index.html">Ver home</a>
+        <a class="btn" href="v4-assinatura/produtos.html">Loja</a>
+        <a class="btn" href="v4-assinatura/produto.html?id=defining-gel">Produto</a>
+      </div>
+    </article>
+  </section>
+
+  <div class="section-label">Primeiras propostas</div>
 
   <main class="grid">
     <article class="card">

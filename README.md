@@ -1,21 +1,24 @@
 # Female A · Propostas de layout e-commerce
 
-Layout estático (HTML, CSS e JavaScript puro) para apresentação ao cliente, com três direções visuais
-diferentes sobre o mesmo brand book (bronze `#996F52`, creme `#FDFBF7`, logo e diamante).
+Layout estático (HTML, CSS e JavaScript puro) para apresentação ao cliente, com quatro direções visuais
+sobre o mesmo brand book (bronze `#996F52`, creme `#FDFBF7`, logo e diamante). A Versão 4 foi criada a
+partir do feedback da cliente: o formato da Versão 1 com a paleta, as fontes e o tom da Versão 3, sem preto
+e sem cantos arredondados.
 
 ## Como abrir
 
-Dê dois cliques em `index.html` (raiz). Ele abre a página de apresentação com as três versões lado a lado
+Dê dois cliques em `index.html` (raiz). Ele abre a página de apresentação com as quatro versões
 e links para a home, a loja e a página de produto de cada uma. Não precisa de servidor nem instalação;
 só a internet para carregar as fontes do Google Fonts.
 
 ## Estrutura
 
 ```
-index.html          página de apresentação das 3 versões
+index.html          página de apresentação das 4 versões
 v1-refy/            Versão 1 · Clean & Bold (inspiração Refy)
 v2-sallve/          Versão 2 · leve & próxima (inspiração Sallve)
 v3-editorial/       Versão 3 · Luxo Editorial (direção criativa própria)
+v4-assinatura/      Versão 4 · Assinatura (formato da V1 + paleta e fontes da V3)
   index.html        home
   produtos.html     listagem (filtros por categoria, ordenação, busca ?q=)
   produto.html      página de produto (?id=defining-gel, ?id=growth-elixir, ...)
@@ -47,10 +50,10 @@ Finalizar compra, login e envio de formulários são apenas demonstrativos (exib
 - **Imagens:** substitua o arquivo em `assets/img/` mantendo o mesmo nome, ou altere o caminho em
   `data.js` (produtos) ou no HTML da página (banners e seções).
 - **Textos das páginas:** direto no HTML. A tradução em inglês de cada texto fica no dicionário `EN`
-  (em `shared/js/i18n.js` para a V3 e nos arquivos `js/v1.js` e `js/v2.js` para as outras versões),
+  (em `shared/js/i18n.js` para a V3 e nos arquivos `js/v1.js`, `js/v2.js` e `js/v4.js` para as outras versões),
   usando a mesma chave do atributo `data-i18n`.
 - **Cores e fontes de cada versão:** variáveis CSS no topo de `v1-refy/css/v1.css`,
-  `v2-sallve/css/v2.css` e `shared/css/base.css` (V3).
+  `v2-sallve/css/v2.css`, `v4-assinatura/css/v4.css` e `shared/css/base.css` (V3).
 
 ## Observações
 
